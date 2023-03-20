@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@200;300;400;500&family=Kanit:wght@300;400&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+html{
+    font-size:10px;
+}
+body{
+    margin:0;
+    padding:0;
+}
+.clear::after{
+    content:"";
+    display:block;
+    clear:both;
+}
+#skip{
+    position: relative;
+}
+#skip a{
+    z-index:99;
+    position: absolute;
+    left: 0;
+    top: -40px;
+    width: 200px;
+    border:1px solid #fff;
+    color: #fff;
+    text-align: center;
+    background: #333;
+    line-height: 30px;      
+}
+#skip a:active, #skip a:focus{
+    top: 0;
+}
+.hide{
+    position:absolute;
+    left:-5000px;
+}
+a{ 
+    text-decoration:none;
+}
+
+/* 스크롤 정보 */
+.scrollInfo{
+    position: fixed;
+    display: block;
+    font-size: 15px;
+    padding: 10px 10px 10px 10px;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+/* 헤더 영역 */
+header{
+    text-align:center;
+    position:fixed;
+    width:100vw;
+    height:80px;
+    border-bottom:2px solid #000;
+    background-color: rgba(255,255,255,0.85);
+    z-index:9999;
+    transition:all .3s;
+}
+header h1{
+    position:absolute;
+    top:0;
+    left:50px;
+    padding:20px 0 0 0;
+}
+header h1 a{
+    display:block;
+    width:215px;
+    height:43px;
+    color:transparent;
+    background:url("../img/logo-icon1.png") no-repeat left top;
+    background-size:cover;
+    transition:all .3s;
+
+}
+header .lnb > ul > li{
+    display:inline-block;
+    height:80px;
+}
+header .lnb > ul > li > a{
+    display:inline-block;
+    color:#000;
+    height:80px;
+    padding:0 35px;
+    box-sizing:border-box;
+    line-height:80px;
+    font-size:1.7rem;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    transition:all .3s;
+}
+header .lnb > ul > li > a span{
+    position:relative;
+}
+header .lnb > ul > li > a:hover span::after{
+    content:"";
+    display:block;
+    width:100%;
+    height:2px;
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:-9px;
+    background-color: #000;
+}
+
+/* 서브메뉴 */
+header .lnb > ul > li > ul{
+    display:none;
+    overflow:hidden;
+    border-top: 1px solid #000;
+    position: absolute;
+    z-index:2;
+    top:79px;
+    left:0;
+    right:0;
+    height:auto;
+    background-color: rgba(255,255,255,0.99);
+    font-size:2rem;
+    padding:30px 0;
+    box-sizing:border-box;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+}
+header .lnb > ul li > ul > span{
+    font-size:1.7rem;
+    display: inline-block;
+    font-weight:bold;
+    margin:0 0 20px 0;
+    color:#3c66f0;
+}
+header .lnb > ul li > ul > li{
+    display:block;
+    font-size:1.5rem;
+    padding:10px 0;
+}
+header .lnb > ul li > ul > li a{
+    color:#000;
+    padding:10px 0 10px 0;
+    width:100%;
+    height:100%;
+}
+header .lnb > ul li > ul > li a:hover{
+    font-weight:500;
+}
+header .lnb > ul > li:hover > ul{
+    display:block;
+}
+
+/* 기타 메뉴*/
+header .spot{
+    position:absolute;
+    top:0; 
+    right:50px;
+}
+header .spot ul li{
+    display:inline-block;
+    position:relative;
+}
+header .spot ul li::after{
+    content:"";
+    display:block;
+    width:1px;
+    height:7px;
+    background-color:#929292;
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    left:-5px;
+}
+header .spot ul li:first-child::after{
+    display:none;
+}
+header .spot ul li a{
+    display:block;
+    color:#777;
+    height:80px;
+    /* border:1px solid red; */
+    padding:0 10px;
+    box-sizing:border-box;
+    line-height:80px;
+    font-size:1.3rem;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+}
+header .spot ul li:last-child a{
+    padding-right:0;
+}
+
+/* 스크롤 시 헤더 높이 변화 */
+header.scroll{
+    height:60px;
+    top:0;
+    background-color: rgba(255,255,255,1);
+}
+header.scroll h1{
+    padding:15px 0 0 0;
+}
+header.scroll h1 a{
+    width:121px;
+    height:30px;
+    background:url("../img/logo-icon2.png") no-repeat left top;
+    background-size:cover;
+}
+header.scroll .lnb > ul > li > a{
+    line-height:60px;
+    transition:all .3s;
+}
+header.scroll .spot{
+    display:none;
+}
+header.scroll .lnb > ul > li > ul{
+    top:58px;
+}
+
+/* 모바일 메뉴 */
+#mob_menu{ display:none;}
+#mob_menu .mob_menu_box {
+    position: absolute;
+    background-color: #fff;
+    width: 30px;
+    height: 40px;
+    top: 40px;
+    right: 30px;
+    cursor: pointer;
+}
+#mob_menu .mob_menu_box span {
+position: absolute;
+display: block;
+background-color: #000;
+width: 30px;
+height: 2px;
+transition: 0.6s ease-in-out;
+z-index: 999;
+}
+#mob_menu .mob_menu_box span:nth-child(2) {
+margin-top: 10px;
+}
+#mob_menu .mob_menu_box span:nth-child(3) {
+margin-top: 20px;
+}
+#mob_menu .mob_menu_box.hamburger {
+background-color: black;
+width: 15px;
+transform: rotate(45deg) translate(5px, 1px);
+}
+#mob_menu .mob_menu_box.hamburger2 {
+background-color: black;
+transform: rotate(-45deg);
+transform-origin: center;
+}
+#mob_menu .mob_menu_box.hamburger3 {
+background-color: black;
+width: 15px;
+transform: rotate(45deg) translate(5px, -13.2px);
+}
+
+/* 푸터 영역 */
+footer{
+    width:100%;
+    padding:100px 0 0;
+}
+footer .top{
+    background:#fff;
+    border-top:2px solid #000;
+    border-bottom:1px solid #000;
+}
+footer .top > div{
+    width:1180px;
+    margin:0 auto;
+    padding:13px 0;
+}
+footer .top > div .left{
+    float:left;
+}
+footer .top > div ul li{
+    float:left;
+    padding:0 19px 0 0;
+    position:relative;
+}
+footer .top > div ul li::after{
+    content:"";
+    width:1px;
+    height:10px;
+    background-color:rgba(255,255,255,0.6);
+    display:block;
+    position:absolute;
+    top:50%;
+    right:9px;
+    transform:translateY(-50%);
+}
+footer .top > div ul li:last-child::after{
+    display:none;
+}
+footer .top > div .left li a{
+    line-height:45px;
+    color:#000;
+    font-size:1.4rem;
+}
+footer .top > div .right{
+    float:right;
+}
+footer .top > div div.right p{
+    display:inline-block;
+    color:#000;
+    height:30px;
+    width:242px;
+    text-align:center;
+    font-size:1.3rem;
+    line-height:43px;
+}
+footer .top > div div.right p strong{
+    font-size:1.8rem;
+    padding:0 0 0 20px;
+    font-weight:bold;
+}
+footer .top > div div.right select{
+    border:none;
+    height:30px;
+    width:200px;
+    box-sizing:border-box;
+    color:#191919;
+    padding:0 0 0 21px;
+    font-size:1.2rem;
+    vertical-align:2px;
+}
+footer .bottom{
+    background:#fff;
+    padding:40px 0 44px;
+    text-align:center;
+}
+footer .bottom p{
+    font-size:0;
+    color:transparent;
+    display:inline-block;
+    width:225px;
+    height:41px;
+    background:url("../img/logo-icon1.png") no-repeat left center;
+    background-size:cover;
+}
+footer .bottom ul{
+    font-size:0;
+    padding:30px 0 14px;
+}
+footer .bottom ul li{
+    display:inline-block;
+    text-align:center;
+    color:#000;
+    font-size:1.4rem;
+    padding:0 10px;
+    position: relative;
+}
+footer .bottom ul li::after{
+    content:"";
+    display:block;
+    width:1px;
+    height:8px;
+    background:rgba(0,0,0,0.6);
+    position:absolute;
+    right:0;
+    top:50%;
+    transform:translateY(-50%);
+}
+footer .bottom ul li:last-child::after{
+    display: none;
+}
+footer .bottom address{
+    color:#000;
+    font-size:1.2rem;
+}

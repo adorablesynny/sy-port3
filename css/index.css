@@ -1,0 +1,691 @@
+body{
+    width:100%;
+}
+
+/* 비쥬얼 메인 슬라이드 */
+.slide > .prev, .slide > a{
+    position:absolute;
+    opacity:80%;
+    top:50%;
+    transform:translateY(-50%);
+    width:65px;
+    height:100px;
+    background:url("../img/sp_arrow.png") no-repeat left top;
+    color:transparent;
+    z-index:2;
+    transition:all .3s;
+}
+.slide .prev{
+    left:50px;
+    background-position:-21px -11px;
+}
+.slide .next{
+    right:50px;
+    background-position:-125px -11px;
+}
+.slide .control{
+    position:absolute;
+    left:200px;
+    top:180px;
+    z-index:99;
+    
+}
+.slide .control .auto{
+    position: absolute;
+    left:0px;
+    top:0;
+    display: inline-block;
+}
+.slide .control .auto a{
+    background-image:url("../img/sp_com2.png");
+    background-repeat:no-repeat;
+    width:13px;
+    height:12px;
+    margin-left:8px;
+    opacity:0.5;
+    color:transparent;
+    font-size:0;
+    display:inline-block;
+    z-index:999;
+}
+.slide .control .auto .play.on, .slide .control .auto .pause.on{
+    opacity:1;
+}
+.slide .control .auto a.play{
+    background-position:left bottom 2px;
+    cursor:pointer;
+}
+.slide .control .auto a.pause{
+    background-position:left top -1px;
+    cursor:pointer;
+}
+.slide .control .pager{
+    margin-left:60px;
+    position: relative;
+}
+.slide .control .pager a{
+    padding:0 3px;
+    margin-right:3px;
+    display:inline-block;
+    font-size:2.4rem;
+    font-style:italic;
+    color:rgba(255,255,255,0.8);
+    cursor:pointer;
+    text-shadow:0px 0px 5px rgba(0,0,0,0.7);
+}
+.slide .control .pager a.now{
+    color:#fff;
+    text-shadow:0px 0px 5px rgba(243, 49, 49, 1);
+}
+
+/* 슬라이드 영역 */
+#visual{
+    width:100%;
+    height:auto;
+    position:relative;
+    top:0;
+    left:0;
+}
+#visual .slide-wrap{
+    width:100%;
+    overflow:hidden;
+}
+#visual .slide-wrap .slide-container{
+    position: relative;
+    top:0;
+    left:0;
+    height:950px;
+}
+#visual .slide-wrap .slide-container > div{
+    float:left;
+    height:950px;
+    position:relative;
+    top:0;
+    left:0;
+    z-index:-1;
+    width:100vw;
+}
+#visual .slide-wrap .slide1{
+    background-image:url(https://www.hyundaicard.com/docfiles/resources/pc/images/detail/bg_voucher_tge2.png);
+    background-position:center center;
+    background-size:100vw;
+}
+#visual .slide-wrap .slide2{
+    background-image:url('https://img.hyundaicard.com/docfiles/resources/pc/images/detail/bg_top_sbhc.png');
+    background-position:left bottom -500px;
+    background-size:100%;
+}
+#visual .slide-wrap .slide3{
+    background-image:url('https://img.hyundaicard.com/docfiles/resources/pc/images/detail/bg_top_nvhc.png');
+    background-position: left top -250px;
+    background-size:100%;
+}
+#visual .slide-wrap .slide3 .slide-text > *{
+    color:rgb(10, 10, 24);
+}
+#visual .slide-wrap .slide4{
+    background:#000 url('https://img.hyundaicard.com/docfiles/resources/pc/images/detail/bg_top_mxb.png');
+    background-position:left top -200px;
+    background-size:100%;
+}
+#visual .slide-wrap .slide5{
+    background-image:url('https://img.hyundaicard.com/docfiles/resources/pc/images/detail/bg_top_tre5.png');
+    background-position:left top -330px;
+    background-size:100%;
+}
+#visual .slide-wrap .slide-container .slide-text{
+    z-index:99;
+    color:#fff;
+    padding:30px 0 0 0;
+    font-size:2.4rem;
+    position:absolute;
+    line-height:40px;
+    font-weight:500;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    animation:text-ani 5s infinite;
+    position: absolute;
+    top:220px;
+    left:200px;
+    text-shadow:1px 1px 5px rgba(255,255,255,1);
+}
+#visual .slide-wrap .slide-container .slide-text p span{
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    display: block;
+    padding:30px 0 0 0;
+    font-weight:500;
+    font-size:6rem;
+    font-style: italic;
+}
+@keyframes text-ani{
+    0%{ transform:translateY(0);}
+    50%{ transform:translateY(-10px); }
+    100%{ transform:translateY(0);}
+}
+.soft{
+    transition:left .5s ease-in-out;
+}
+
+/* 카드 종류 소개 영역 */
+#card{
+    width:100%;
+    height:875px;
+    padding:100px 0 0 0;
+    transition:all .5s;
+    background-color:#fff;
+}
+#card.color{
+    background-color:rgb(255, 230, 88);
+}
+.card-wrap{
+    margin:0 auto;
+    padding:0 50px;
+    position: relative;
+}
+.card-wrap > ul{
+    overflow:hidden;
+    width:100%;
+    margin:0 auto;
+    text-align:center;
+    padding:0 0 30px 0;
+}
+.card-wrap > ul > li{
+    display:inline-block;
+    width:500px;
+    height:auto;
+    margin:0 auto;
+}
+.card-wrap > ul > li > a{
+    font-family: 'Kanit', sans-serif;
+    color:#000;
+    font-size:4rem;
+    display:inline-block;
+    padding:0 0 20px 0;
+}
+.card-wrap > ul > li.on > a{
+    font-weight:700;
+}
+.card-wrap > ul > li > span{
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    line-height:26px;
+    display:block;
+    font-size:1.6rem;
+}
+.card-wrap > ul > li > a.view-all{
+    display:block;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-size:1.4rem;
+    margin:10px 0 0 0;
+    font-weight:500;
+}
+.card-wrap > ul > li > a.view-all:hover{
+    color: #3c66f0;
+    font-weight:700;
+}
+.card-wrap > ul > li > div > a.card-keyword{
+    display:inline-block;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-size:1.3rem;
+    margin:10px 0 0 0;
+    padding:5px 10px;
+    border:1px solid #000;
+    background: #fff;
+    border-radius:20px;
+    font-weight:500;
+    margin:0 5px 5px 0;
+    color:#000;
+    transition:all .4s;
+}
+.card-wrap > ul > li:first-child.on > div > a.card-keyword{
+    background-color: rgb(238, 79, 105);
+    border-color:rgba(238, 79, 105);
+    color:#fff;
+}
+.card-wrap > ul > li:nth-child(2).on > div > a.card-keyword{
+    background-color: #3c66f0;
+    border-color:#3c66f0;
+    color:#fff;
+}
+
+.card-wrap > ul > li > .card-container{
+    position: absolute;
+    left:0;
+    top:280px;
+    width:100%;
+    display:none;
+}
+.card-wrap > ul > li > .card-container ul{
+    width:70vw;
+    height:auto;
+    margin:0 auto;
+    display:flex;
+    flex-wrap:wrap;
+    padding:0 0 50px 0;
+}
+.card-wrap > ul > li > .card-container ul li{
+    width:25%;
+    height:270px;
+}
+.card-wrap > ul > li > .card-container ul li a{
+    display:inline-block;
+    width:100%;
+    height:auto;
+    transition:transform .4s;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+}
+.card-wrap > ul > li > .card-container ul li:hover a{
+    transform:translateY(-20px);
+}
+
+.card-wrap > ul > li > .card-container ul li a img{
+    width:130px;
+    padding:15px 0 15px 0;
+}
+.card-wrap > ul > li > .card-container ul li a p{
+    font-size:1.6em;
+    color:#000;
+    font-weight:500;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    line-height:1.1;
+}
+.card-wrap > ul > li.show > a:first-child{
+    text-shadow:0px 0px 10px rgba(255,255,255,1);
+}
+.card-wrap > ul > li.show > div{
+    display:block;
+}
+/* 이벤트 영역 */
+#event > div{
+    position: relative;
+    width:1180px;
+    margin:0 auto;
+    padding:100px 0 0 0;    
+    overflow:hidden;
+}
+#event .top > .eventwrap{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:nowrap;
+    position: relative;
+    left:0;
+}
+#event .top > .eventwrap li{
+    display:block;
+    margin:10px 20px 0 0;
+    border-radius: 5px;
+}
+#event .top > ul li:first-child{
+    background:url("../img/event-1.jpg") no-repeat;
+    background-position:center center;
+    background-size: cover;
+}
+#event .top > ul li:nth-child(2){
+    background:url("../img/event-2.jpg") no-repeat;
+    background-position:center center;
+    background-size: cover;
+}
+#event .top > ul li:nth-child(3){
+    background:url("../img/event-3.jpg") no-repeat;
+    background-position:center center;
+    background-size: cover;
+}
+#event .top > ul li:nth-child(4){
+    background:url("../img/event-4.jpg") no-repeat;
+    background-position:center center;
+    background-size: cover;
+}
+#event .top > ul li:nth-child(5){
+    background:url("../img/event-5.jpg") no-repeat;
+    background-position:center center;
+    background-size: cover;
+}
+#event .top > ul li:last-child{
+    background:url("../img/event-6.png") no-repeat;
+    background-position:center center;
+    background-size: cover;
+}
+
+#event .top > ul a{
+    display:block;
+    width:280px;
+    height:280px;
+    box-sizing:border-box;
+    font-size:1.7rem;
+    color:#fff;
+    text-align:center;
+    font-weight:bold;
+    border-radius: 5px;
+    transition:all .5s;
+}
+#event .top > ul a:hover{
+    background-color: rgba(0,0,0,0.6);
+    outline:1px solid rgba(255,255,255,0.3);
+    outline-offset:-10px;
+}
+#event .top > ul li a span{
+    display:block;
+    opacity:0;
+    padding:5px 0 0;
+    font-weight:normal;
+    font-size:2rem;    
+    font-weight:500;
+    line-height:1;
+    padding:100px 0 0 0;
+    line-height:1.5;
+    color:#fff;
+    transition:opacity 0.5s;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+}
+#event .top > ul li a:hover span{
+    opacity:1;
+}
+#event .top .event-more{
+    position: absolute;
+    top:70px;
+    right:0;
+    font-size:1.5rem;
+    background:none;
+    border:1px solid rgba(0,0,0,0.5);
+    border-radius:20px;
+    color:rgba(0,0,0,0.7);
+    padding:5px 10px;    
+    transition:all .3s;
+    font-weight:300;
+}
+#event .top .event-more:hover{
+    font-weight:600;
+}
+#event .top > a.next, #event .top > a.prev{
+    z-index:999;
+    position: absolute;
+    top:210px;
+    left:50%;
+    width:40px;
+    height:80px;
+    background-image:url("../img/sp_arrow.png");
+    background-size:cover;
+    background-repeat:no-repeat;
+    cursor:pointer;
+    transition:transform .3s;
+}
+#event .top > a.next:hover, #event .top > a.prev:hover{
+    transform:scale(1.1);
+}
+#event .top > a.next{
+    margin-left:45%;
+    background-position:-72px 0px;
+}
+#event .top > a.prev{
+    margin-left:-49%;
+    background-position:-15px 0px;
+}
+#event .top a.disabled{
+    display:none;
+}
+#event .bottom{
+    padding:100px 0 0;
+}
+#event .bottom h2{
+    text-align:center;
+    font-weight:bold;
+    line-height:77px;
+    font-size:24px;
+    color:#3c66f0;
+    border-bottom:1px solid #000;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+}
+#event .bottom > div{
+    width:49%;
+    height:265px;
+    float:left;
+    background-color: #f8f6f6;
+    position:relative;
+    border-radius:10px;
+}
+#event .bottom > div > a{
+    position:absolute;
+    color:transparent;
+    right:23px;
+    top:23px;
+    width:30px;
+    height:30px;
+    border-radius:100%;
+    background: url("../img/sp_com.png") no-repeat center top -13px;
+    transition:transform 2s;
+}
+#event .bottom > div > a:hover{
+    transform:rotate(360deg);
+}
+#event .bottom > div li a p{
+    font-size:1.3rem;
+    color:#979797;
+    margin-top:-10px;
+    font-weight:500;
+}
+
+#event .bottom > div.left li:nth-child(3), #event .bottom > div.left li:nth-child(4){
+    margin-top:-48px;
+}
+#event .bottom > div.left li a{
+    font-size:1.8rem;
+    line-height:1;
+    color:#424241;
+    font-weight:500;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+}
+#event .bottom > div.left li a:hover{
+    color:#000;
+}
+
+#event .bottom > .left ul li{
+    float:left;
+    width:50%;
+    padding:35px;
+    box-sizing:border-box;
+    line-height:100%;
+}
+#event .bottom > .left ul li:first-child{
+    border:none;
+}
+#event .bottom > .left ul li a p{
+    padding:25px 0 16px 0;
+    line-height:100%;
+}
+#event .bottom > .left ul li a div{
+    line-height:19px;
+}
+#event .bottom > .left ul li span{
+    display:block;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    width:100%;
+}
+
+#event .bottom > div.right{
+    float:right;
+}
+#event .bottom > div.right ul li{
+    position:relative;
+    border-bottom:1px solid #fff;
+}
+#event .bottom > div.right ul li:last-child{
+    border:none;
+}
+#event .bottom > div.right ul li a{
+    display:block;
+    line-height:60px;
+    text-indent:30px;
+    width:400px;
+    display:block;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    font-size:1.5rem;
+    color:#000;
+    font-weight:500;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+}
+
+#event .bottom > div.right ul li a p{
+    margin-top:0;
+}
+#event .bottom > div.right ul li a p{
+    position:absolute;
+    right:30px;
+    top:0;
+}
+
+/* 컬쳐 스페이스 영역 */
+#space-culture{
+    width:100%;
+    background-color: #fff;
+}
+#space-culture h3{
+    width:1180px;
+    text-align:center;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    margin:0 auto;
+    line-height:40px;
+    border-bottom:1px solid #000;
+}
+#space-culture > div.container{
+    position: relative;
+    width:1180px;
+    margin:0 auto;
+    padding:100px 0 0 0;
+}
+#space-culture .space-wrap, #space-culture .culture-wrap{
+    padding:40px 0 0 0;
+    width:1180px;
+    overflow:hidden;
+}
+#space-culture .space-culture{
+    height:auto;
+    margin:0 auto;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-size:2.2rem;
+    font-weight:500;
+    position: relative;
+    left:0;
+}
+#space-culture div.space-culture-event{
+    padding:0 0 20px 0;
+    width:300px;
+    height:auto;
+    float:left;
+    margin-right:20px;
+}
+#space-culture div.space-culture-event:last-child{
+    margin-right:0;
+}
+#space-culture div.space-culture-event a{
+    width:100%;
+    position: relative;
+}
+#space-culture div.space-culture-event a > .view-more{
+    position: absolute;
+    top:50%;
+    transform:translateY(-50%);
+    right:20px;
+}
+#space-culture div.space-culture-event a > .view-more > img{
+    width:30px;
+    height:30px;
+    background-color: rgba(255,255,255,0.7);
+    border-radius:50%;
+    transition:background-color .3s;
+    z-index:99;
+}
+#space-culture div.space-culture-event:hover > a div.view-more img{
+    background-color: rgba(255,255,255,0.9);
+    animation:viewmore.7s ease-in-out infinite;
+}
+@keyframes viewmore{
+    0%{ transform:translateX(0); }
+    30%{ transform:translateX(5px); }
+    100%{ transform:translateX(0); }
+}
+#space-culture div.space-culture-event:hover strong{
+    animation:colorC .7s ease-in both;
+}
+@keyframes colorC{
+    0%{ color: gold;}
+    20%{ color: rgb(70, 233, 206);}
+    30%{ color: rgb(30, 175, 219);}
+    40%{ color: rgb(30, 74, 170);}
+    60%{ color: rgb(151, 8, 151);}
+    80%{ color: rgb(238, 79, 105);}
+    90%{ color: rgb(255, 115, 0);}
+    100%{ color: #0070f0;}
+}
+#space-culture div.space-wrap div.space-culture-event .space-logo { 
+    width:100px;
+    height:50px;
+    padding:0 0 20px 0;
+}
+#space-culture div.space-wrap div.space-culture-event .space-logo img{
+    width:100%;
+}
+#space-culture div.space-culture-event > a > img{
+    width:300px;
+}
+
+#space-culture div.space-culture-event > a span{
+    display: block;
+    line-height:25px;
+    font-size:1.8rem;
+    color:#000;
+    font-weight:400;
+    padding:0 0 15px 0;
+}
+#space-culture div.space-culture-event > a > p{
+    padding:40px 0 0 0;
+    color:#727070;
+    font-size:1.6rem;
+}
+#space-culture div.space-culture-event > a > p strong{
+    display: block;
+    color:#000;
+    font-size:1.8rem;
+    font-weight:700;
+    transition:color .3s;
+    padding:0 0 10px 0;
+}
+#space-culture div.space-culture-event > a > p em{
+    display:block;
+    color:#000;
+    font-size: 1.5rem;
+    padding:10px 0 0 0;
+}
+#space-culture div.container > a{
+    position:absolute;
+    opacity:80%;
+    top:92px;
+    width:35px;
+    height:90px;
+    background:url("../img/sp_arrow.png") no-repeat;
+    background-size: cover;
+    color:transparent;
+    z-index:2;
+}
+#space-culture div.container .prev{
+    left:30px;
+    background-position:-19px -9px;
+}
+#space-culture div.container .next{
+    right:30px;
+    background-position:-91px -9px;
+}
+
+#space-culture div.culture-wrap div.space-culture-event .culture-logo{
+    width:100px;
+    height:50px;
+    padding:0 0 20px 0;
+}
+/* #space-culture div.culture-wrap .space-culture-event:first-child .culture-logo{ background:url("../img/10-superconcert.svg") no-repeat;}
+#space-culture div.culture-wrap .space-culture-event:nth-child(2) .culture-logo{ background:url("../img/11-cultureproject.svg") no-repeat;}
+#space-culture div.culture-wrap .space-culture-event:nth-child(3) .culture-logo{ background:url("../img/12-davincimotel.svg") no-repeat;}
+#space-culture div.culture-wrap .space-culture-event:nth-child(4) .culture-logo{ background:url("../img/13-overtherecord.svg") no-repeat;}
+#space-culture div.culture-wrap .space-culture-event:nth-child(5) .culture-logo{ background:url("../img/14-fanmadelive.svg") no-repeat;}
+#space-culture div.culture-wrap .space-culture-event:last-child .culture-logo{ background:url("../img/15-limitedvinylclub.svg") no-peat;}
+ */

@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyundai Card</title>
+
+    <!-- <link rel="icon" href="img/nonfictionfavicon.png"> -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index_m.css">
+
+</head>
+<body>
+    <!-- skip -->
+    <div id="skip">
+        <a rel="bookmark" href="#card">최신 카드 소식 바로가기</a>
+        <a rel="bookmark" href="#event">이벤트 바로가기</a>
+        <a rel="bookmark" href="#space-culture">현대카드의 스페이스 앤 컬쳐 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+    <!-- info -->
+    <div class="scrollInfo">scrollTop : <p>0</p></div>
+    <!-- //info -->
+
+    <!-- 헤더 영역-->
+    <header>
+        <h1><a href="index.html" title="현대카드 메인 페이지로 이동">현대 카드</a></h1>
+        <h2 class="hide">대메뉴</h2>
+
+        <!-- 모바일에서 보일 메뉴-->
+        <div id="mob_menu">
+            <div class="mob_menu_box"></div>
+            <div class="overlay"></div>
+            <nav class="mob_lnb">
+                <ul>
+                    <li><a href="#" title="내 계정보기"><span>My Account</span></a></li>
+                    <li><a href="#" title=""><span>카드</span></a>
+                        <ul class="sub-menu">
+                            <li><a href="sub/" title="">카드 신청</a></li>
+                            <li><a href="sub/" title="">카드파인더</a></li>
+                            <li><a href="sub/" title="">바로발급서비스</a></li>
+                            <li><a href="sub/" title="">카드 발급 조회</a></li>
+                            <li><a href="sub/" title="">카드 수령 등록</a></li>
+                            <li><a href="sub/" title="">가족카드</a></li>
+                            <li><a href="sub/" title="">Gift카드</a></li>
+                            <li><a href="sub/" title="">후불하이패스카드</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" title=""><span>혜택</span></a>
+                        <ul class="sub-menu">
+                            <li><a href="sub/" title="">포인트</a></li>
+                            <li><a href="sub/" title="">바우처</a></li>
+                            <li><a href="sub/" title="">받은 혜택</a></li>
+                            <li><a href="sub/" title="">마일리지 긴급충전</a></li>
+                            <li><a href="sub/" title="">M 혜택</a></li>
+                            <li><a href="sub/" title="">X 혜택</a></li>
+                            <li><a href="sub/" title="">H-coin 혜택</a></li>
+                            <li><a href="sub/" title="">해외 이용 혜택</a></li>
+                            <li><a href="sub/" title="">이벤트</a></li>
+                        </ul>
+                    
+                    </li>
+                    <li><a href="#" title=""><span>금융</span></a>
+                        <ul class="sub-menu">
+                            <li><a href="sub/" title="">장기카드대출(카드론)</a></li>
+                            <li><a href="sub/" title="">단기카드대출(현금서비스)</a></li>
+                            <li><a href="sub/" title="">일부결제금액이월약정(리볼빙)</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" title="문화 사업"><span>컬쳐</span></a>
+                        <ul class="sub-menu">
+                            <li><a href="sub/" title="">DIVE 웹사이트 바로가기</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" title=""><span>고객지원</span></a>
+                        <ul class="sub-menu">
+                            <li><a href="sub/" title="">홈페이지 상담</a></li>
+                            <li><a href="sub/" title="">ARS 상담</a></li>
+                            <li><a href="sub/" title="">카드 도난, 분실 신고/해제</a></li>
+                            <li><a href="sub/" title="">FAQ</a></li>
+                            <li><a href="sub/" title="">개인신용평가 결과 대응권 신청</a></li>
+                            <li><a href="sub/" title="">금리인하요구권 신청</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- pc에서 보일 메뉴-->
+        <nav class="lnb">
+            <ul>
+                <li class="top-list"><a href="#" title="내 계정보기"><span>My Account</span></a></li>
+                <li class="top-list"><a href="#" title=""><span>카드</span></a>
+                    <ul class="sub-menu">
+                        <li>카드 안내, 신청</li>
+                        <li><a href="sub/" title="">카드 신청</a></li>
+                        <li><a href="sub/" title="">카드파인더</a></li>
+                        <li><a href="sub/" title="">바로발급서비스</a></li>
+                        <li><a href="sub/" title="">카드 발급 조회</a></li>
+                        <li><a href="sub/" title="">카드 수령 등록</a></li>
+                        <li><a href="sub/" title="">가족카드</a></li>
+                        <li><a href="sub/" title="">Gift카드</a></li>
+                        <li><a href="sub/" title="">후불하이패스카드</a></li>
+                    </ul>
+                </li>
+                <li class="top-list"><a href="#" title=""><span>혜택</span></a>
+                    <ul class="sub-menu">
+                        <li>혜택 안내 및 이벤트</li>
+                        <li><a href="sub/" title="">포인트</a></li>
+                        <li><a href="sub/" title="">바우처</a></li>
+                        <li><a href="sub/" title="">받은 혜택</a></li>
+                        <li><a href="sub/" title="">마일리지 긴급충전</a></li>
+                        <li><a href="sub/" title="">M 혜택</a></li>
+                        <li><a href="sub/" title="">X 혜택</a></li>
+                        <li><a href="sub/" title="">H-coin 혜택</a></li>
+                        <li><a href="sub/" title="">해외 이용 혜택</a></li>
+                        <li><a href="sub/" title="">이벤트</a></li>
+                    </ul>
+                
+                </li>
+                <li class="top-list"><a href="#" title=""><span>금융</span></a>
+                    <ul class="sub-menu">
+                        <li>금융</li>
+                        <li><a href="sub/" title="">장기카드대출(카드론)</a></li>
+                        <li><a href="sub/" title="">단기카드대출(현금서비스)</a></li>
+                        <li><a href="sub/" title="">일부결제금액이월약정(리볼빙)</a></li>
+                    </ul>
+                </li>
+                <li class="top-list"><a href="#" title="문화 사업"><span>컬쳐</span></a>
+                    <ul class="sub-menu">
+                        <li>현대카드만의 독보적인 컬처 콘텐츠를 DIVE에서 즐기세요.</li>
+                        <li><a href="sub/" title="">DIVE 웹사이트 바로가기</a></li>
+                    </ul>
+                </li>
+                <li class="top-list"><a href="#" title=""><span>고객지원</span></a>
+                    <ul class="sub-menu">
+                        <li>일반 상담, 문의</li>
+                        <li><a href="sub/" title="">홈페이지 상담</a></li>
+                        <li><a href="sub/" title="">ARS 상담</a></li>
+                        <li><a href="sub/" title="">카드 도난, 분실 신고/해제</a></li>
+                        <li><a href="sub/" title="">FAQ</a></li>
+                        <li><a href="sub/" title="">개인신용평가 결과 대응권 신청</a></li>
+                        <li><a href="sub/" title="">금리인하요구권 신청</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <h2 class="hide">관련서비스</h2>
+        <nav class="spot">
+            <ul>
+                <li><a href="sub/" title="">개인사업자</a></li>
+                <li><a href="sub/" title="">법인</a></li>
+                <li><a href="sub/" title="">가맹점</a></li>
+                <li><a href="sub/" title="">소비자보호 포털</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 비쥬얼(메인 슬라이드) 영역-->
+    <div id="visual" class="slide">
+        <h2 class="hide">최신 카드 소식</h2> 
+        <a href="#" title="이전 슬라이드" class="prev">이전</a>
+        <a href="#" title="다음 슬라이드" class="next">다음</a>
+        <div class="control">
+            <div class="auto">
+                <a href="#" class="play">시작</a>
+                <a href="#" class="pause">일시정지</a>
+            </div>
+            <div class="pager">
+            </div>
+        </div>
+        <div class="slide-wrap">
+            <div class="slide-container clear">
+                <div class="slide1" id="slide1">
+                    <div class="slide-text">
+                        <p>
+                            My First Luxury <br>
+                            자유와 모험을 즐기는 나의 첫 럭셔리 카드<br>
+                            <span>The Green Edition2</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="slide2" id="slide2">
+                    <div class="slide-text">
+                        <p>
+                            쓸 때 마다 ★별★이 되는 카드 <br>
+                            <span>스타벅스 현대카드</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="slide3" id="slide3">
+                    <div class="slide-text">
+                        <div class="cover"></div>
+                        <p>
+                            네이버 포인트 최대 5% 적립, <br>
+                            네이버플러스멤버쉽 무료이용권까지!<br>
+                            네이버 현대카드 만의 특별한 디자인을 소개합니다.<br>
+                            <span>네이버 현대카드</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="slide4" id="slide4">
+                    <div class="slide-text">
+                        <p>
+                            혜택의 블랙 라벨 <br>
+                            M의 전 영역 적립과 X의 10% 할인을 동시에<br>
+                            <span>MX Black</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="slide5" id="slide5">
+                    <div class="slide-text">
+                        <p>
+                            My Hot Luxury <br>
+                            핫한 라이프를 완성하는 럭셔리 카드<br>
+                            <span>the Red Edition5</span> 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <!-- 카드 종류 소개영역 -->
+    <div id="card">
+        <h2 class="hide">현대카드 소개 - 현대 오리지날, 챔피온 브랜드</h2>
+        <div class="card-wrap clearfix">
+            <ul>
+                <li class="cards">
+                    <a href="#" title="">Hyundae Originals</a>
+                    <span>현대카드의 오리지널리티를 담은 <br>
+                        진정한 현대카드</span>
+                    <a href="sub/" title="현대카드 오리지날 전체보기" class="view-all">전체보기</a>
+                    <div class="keyword">
+                        <a href="sub/" title="프리미엄 혜택" class="card-keyword">#프리미엄</a>
+                        <a href="sub/" title="쓸 때마다 추가 할인" class="card-keyword">#쓸 때마다 할인</a>
+                        <a href="sub/" title="어디서나 포인트 적립 가능" class="card-keyword">#어디서나 포인트 적립</a>
+                        <a href="sub/" title="3F시스템 혜택" class="card-keyword">#3F 시스템 혜택</a>
+                    </div>
+                    <div class="card-container">
+                        <ul>
+                            <li>
+                                <a href="sub/" title="더 퍼플 오제">
+                                    <img src="img/card-1.png" alt="">
+                                    <p>the Purple osée</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="sub/" title="더 레드 스트라이프">
+                                    <img src="img/card-2.png" alt="">
+                                    <p>the Red Stripe</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="sub/" title="더 레드 에디션5">
+                                    <img src="img/card-3.png" alt="">
+                                    <p>the Red Edition5</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="sub/" title="더 그린 에디션2">
+                                    <img src="img/card-4.png" alt="">
+                                    <p>the Green Edition2</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="sub/" title="더 핑크">
+                                    <img src="img/card-5.png" alt="">
+                                    <p>the Pink</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="sub/" title="엠 부스트">
+                                    <img src="img/card-6.png" alt="">
+                                    <p>M BOOST</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="sub/" title="엑스 부스트">
+                                    <img src="img/card-7.png" alt="">
+                                    <p>X BOOST</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="sub/" title="제로 에디션2 할인형">
+                                    <img src="img/card-8.png" alt="">
+                                    <p>Zero Edition2 <br>
+                                    (할인형)</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="cards">
+                    <a href="#" title="">Champion Brands</a>
+                    <span>최고의 브랜드와 콜라보한 <br>
+                        또 하나의 현대카드</span>
+                    <a href="sub/" title="챔피온 브랜드 전체보기" class="view-all">전체보기</a>
+                    <div class="keyword">
+                        <a href="sub/" title="현대자동차" class="card-keyword">#현대자동차</a>
+                        <a href="sub/" title="기아" class="card-keyword">#기아</a>
+                        <a href="sub/" title="이마트" class="card-keyword">#이마트</a>
+                        <a href="sub/" title="제네시스" class="card-keyword">#제네시스</a>
+                        <a href="sub/" title="최고의 브랜드" class="card-keyword">#최고의 브랜드</a>
+                    </div>
+                    <div class="card-container">
+                        <ul>
+                            <li>
+                                <a href="sub/" title="쓱닷컴카드 에디션2">
+                                    <img src="img/card-9.png" alt="">
+                                    <p>SSG.COM카드 Edition2</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="sub/" title="넥슨 현대카드">
+                                    <img src="img/card-10.png" alt="">
+                                    <p>넥슨 현대카드</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="sub/" title="에너지플러스카드 에디션2">
+                                    <img src="img/card-11.png" alt="">
+                                    <p>에너지플러스카드 Edition2</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="sub/" title="네이버 현대카드">
+                                    <img src="img/card-12.png" alt="">
+                                    <p>네이버 현대카드</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="sub/" title="대한항공카드 150">
+                                    <img src="img/card-13.png" alt="">
+                                    <p>대한항공카드 150</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="sub/" title="스타벅스 현대카드">
+                                    <img src="img/card-14.png" alt="">
+                                    <p>스타벅스 현대카드</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="sub/" title="스마일카드 에디션2">
+                                    <img src="img/card-15.png" alt="">
+                                    <p>SmileCard Edition2</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="sub/" title="코스트코 리워드 현대카드">
+                                    <img src="img/card-16.png" alt="">
+                                    <p>코스트코 리워드 현대카드</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 이벤트 영역-->
+    <div id="event">
+        <h2 class="hide">최신 이벤트</h2>
+        <div>
+            <div class="top clear">
+                <ul class="eventwrap clear">
+                    <li><a href="sub/"><span>현대자동차, 기아<br> 전용카드 - <br>신차 구매 혜택</span> </a></li>
+                    <li><a href="sub/"><span>네이버 현대카드 <br> 이용하고 <br> 1만원 캐시백 받기</span></a></li>
+                    <li><a href="sub/"><span>대한항공카드 이벤트 <br> 항공권 할인 + <br> 마일리지 적립</span></a></li>
+                    <li><a href="sub/"><span>현대홈쇼핑 현대카드 <br> 최대 4만원 <br> 즉시 할인 이벤트</span></a></li>
+                    <li><a href="sub/"><span>모바일 쿠폰으로 <br> 더 편리해진 <br> M포인트 사용</span></a></li>
+                    <li><a href="sub/"><span>월세서비스 <br> 신규 신청하고 <br> 캐시백 혜택 받기 </span></a></li>
+                </ul>
+                <a href="sub/" title="이벤트 전체보기" class="event-more">전체보기</a>
+                <a href="#" class="next" title="다음 콘텐츠"><span class="hide">next</span></a>
+                <a href="#" class="prev" title="이전 콘텐츠"><span class="hide">prev</span></a>
+            </div>
+
+            <article class="bottom clear">
+                <div class="left">
+                    <h2>금융</h2>
+                    <ul class="cash">
+                        <li><a href="sub/"><span>장기카드대출(카드론)</span> <P>목돈이 필요할 때</P></a></li>
+                        <li><a href="sub/"><span>단기카드대출(현금서비스)</span> <P>일상에서 현금이 필요할 때</P></a></li>
+                        <li><a href="sub/"><span>장기카드대출(카드론)</span> <P>목돈이 필요할 때</P></a></li>
+                        <li><a href="sub/"><span> 일부결제금액이월약정(리볼빙) </span><p>카드대금이 부담될 때</p></a></li>
+                    </ul>
+                    <a href="sub/" title="금융신청 더보기">더보기</a>
+                </div>
+                <div class="right">
+                    <h2>뉴스 / 공지사항</h2>
+                    <ul>
+                        <li><a href="sub/"> the Purple 럭셔리 할인 서비스 변경 안내 <p>23. 1. 26</p></a></li>
+                        <li><a href="sub/"> 2층 구독 마스크팩 운영 변경 안내<p>23. 1. 25
+                        </p></a></li>
+                        <li><a href="sub/"> 캐롯손해보험-현대카드M Edition3 발급 종료 안내 <p>23. 1. 19</p></a></li>
+                    </ul>
+                    <a href="sub/" title="뉴스, 공지사항 더보기">더보기</a>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <!-- 배너 영역-->
+    <div id="space-culture">
+        <h2 class="hide">현대카드의 스페이스 앤 컬쳐</h2>
+
+        <div class="container">
+            <h3><img src="img/space.png" alt="스페이스"></h3>
+            <div class="space-wrap">
+                <div class="space-culture clear">
+                    <div class="space-culture-event">
+                        <a href="sub/" class="contents">
+                            <div class="space-logo"><img src="img/1-designlibrary.svg" alt="디자인 라이브러리"></div>
+                            <div class="view-more"><img src="img/black-arrow.png" alt=""></div>
+                            <span>시대를 초월한 <br> 디자인과의 조우</span>
+                            <img src="img/space-1.jpg" alt="공간문화 컨텐츠 이미지" class="space-image">
+                            <p>
+                                <strong>체인지 더 월드</strong>
+                                2월의 디자이너 Benjamin Hubert
+                                <em>2023/02/01-2023/02/28</em>
+                            </p>
+                        </a>
+                    </div>
+                    <div class="space-culture-event">
+                        <a href="sub/" class="contents">
+                            <div class="space-logo"><img src="img/2-musiclibrary.svg" alt="뮤직 라이브러리"></div>
+                            <div class="view-more"><img src="img/black-arrow.png" alt=""></div>
+                            <span>바이닐로 듣는 <br>아날로그 음악의 울림</span>
+                            <img src="img/space-2.jpg" alt="공간문화 컨텐츠 이미지">
+                            <p>
+                                <strong>레전드의 귀환</strong>
+                                뮤직 라이브러리 2월의 새 음반
+                                <em>2023/02/01-2023/02/28</em>
+                            </p>
+                        </a>
+                    </div>
+                    <div class="space-culture-event">
+                        <a href="sub/" class="contents">
+                            <div class="space-logo"><img src="img/3-cookinglibrary.svg" alt="쿠킹 라이브러리"></div>
+                            <div class="view-more"><img src="img/black-arrow.png" alt=""></div>
+                            <span>눈으로 즐기고 입으로 느끼는 <br> 쿠킹의 모든 것</span>
+                            <img src="img/space-3.jpg" alt="공간문화 컨텐츠 이미지">
+                            <p>
+                                <strong>Welcome to the Realworld</strong>
+                                쿠킹 라이브러리 2월의 새 책
+                                <em>2023/02/01-2023/02/28</em>
+                            </p>
+                        </a>
+                    </div>
+                    <div class="space-culture-event">
+                        <a href="sub/" class="contents">
+                            <div class="space-logo"><img src="img/4-artlibrary.svg" alt="아트 라이브러리"></div>
+                            <div class="view-more"><img src="img/black-arrow.png" alt=""></div>
+                            <span>일상의 공간에서 만나는 <br>컨템포러리 아트</span>
+                            <img src="img/space-4.jpg" alt="공간문화 컨텐츠 이미지">
+                            <p>
+                                <strong>오래도록 간직하고 싶으니까</strong>
+                                아트 라이브러리 2월의 새 책
+                                <em>2023/02/01-2023/02/28</em>
+                            </p>
+                        </a>
+                    </div>
+                    <div class="space-culture-event">
+                        <a href="sub/" class="contents">
+                            <div class="space-logo"><img src="img/5-understage.svg" alt="언더 스테이지"></div>
+                            <div class="view-more"><img src="img/black-arrow.png" alt=""></div>
+                            <span>다양한 장르의 문화가 <br> 집결하는 공연장</span>
+                            <img src="img/space-5.jpg" alt="공간문화 컨텐츠 이미지">
+                            <p>
+                                <strong>손민수 Curated 03 이택기</strong>
+                                헤이스팅스 콩쿠르 최연소 우승 피아니스트
+                                <em>2023/02/24-2023/02/24</em>
+                            </p>
+                        </a>
+                    </div>
+                    <div class="space-culture-event">
+                        <a href="sub/" class="contents">
+                            <div class="space-logo"><img src="img/6-storage.svg" alt="비닐 앤 플라스틱"></div>
+                            <div class="view-more"><img src="img/black-arrow.png" alt=""></div>
+                            <span>음악을 보고 듣고 소유하는 <br>플레이그라운드</span>
+                            <img src="img/space-6.jpg" alt="공간문화 컨텐츠 이미지">
+                            <p>
+                                <strong>Teen Pop Collection</strong>
+                                V&P 2월 Monthly Special
+                                <em>2023/02/01-2023/02/28</em>
+                            </p>
+                        </a>
+                    </div>
+                    <div class="space-culture-event">
+                        <a href="sub/" class="contents">
+                            <div class="space-logo"><img src="img/7-vinyl-music.svg" alt="스토리지"></div>
+                            <div class="view-more"><img src="img/black-arrow.png" alt=""></div>
+                            <span>장르를 넘나드는 <br> 실험적 전시공간</span>
+                            <img src="img/space-7.jpg" alt="공간문화 컨텐츠 이미지">
+                            <p>
+                                <strong>자연과 기술이 만난 예술적 경험</strong>
+                                아티스트 듀오 DRIFT 아시아 최초 전시
+                                <em>2022/12/08-2023/04/16</em>
+                            </p>
+                        </a>
+                    </div>
+                    <div class="space-culture-event">
+                        <a href="sub/" class="contents">
+                            <div class="space-logo"><img src="img/8-ironwood.svg" alt="아이언 앤 우드"></div>
+                            <div class="view-more"><img src="img/black-arrow.png" alt=""></div>
+                            <span>현대카드 프리미엄 회원을 위한 <br>골프 공간</span>
+                            <img src="img/space-8.jpg" alt="공간문화 컨텐츠 이미지">
+                            <p>
+                                <strong>골프력 수직 상승</strong>
+                                IRON & WOOD 의 동계 집중 트레이닝
+                                <em>2023/01/03-2023/01/14</em>
+                            </p>
+                        </a>
+                    </div>
+                    <div class="space-culture-event">
+                        <a href="sub/" class="contents">
+                            <div class="space-logo"><img src="img/9-cardfactory.svg" alt="카드팩토리"></div>
+                            <div class="view-more"><img src="img/black-arrow.png" alt=""></div>
+                            <span>카드가 제작되는 모든 과정을 <br>한눈에 볼 수 있는 오픈 팩토리</span>
+                            <img src="img/space-9.jpg" alt="공간문화 컨텐츠 이미지">
+                            <p>
+                                <strong>정체성이 시작되는 공간</strong>
+                                현대카드 카드팩토리 랜선 투어
+                                <em>2023/01/01-2023/12/31</em>
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" title="이전 콘텐츠" class="prev spprev">이전</a>
+            <a href="#" title="다음 콘텐츠" class="next spnext">다음</a>
+        </div> 
+
+        <div class="container">
+            <h3><img src="img/culture.png" alt="컬쳐"></h3>
+            <div class="culture-wrap">
+                <div class="space-culture clear">
+                    <div class="space-culture-event">
+                        <a href="sub/" class="contents">
+                            <div class="culture-logo"><img src="img/10-superconcert.svg" alt="슈퍼 콘서트"></div>
+                            <div class="view-more"><img src="img/black-arrow.png" alt=""></div>
+                            <span>세계 레전드급 <br>아티스트의 놀라운 무대</span>
+                            <img src="img/culture-1.jpg" alt="공간문화 컨텐츠 이미지" class="space-image">
+                            <p>
+                                <strong>너무 기다렸잖아, 빌리 아이리시</strong>
+                                화려하게 돌아온 슈퍼콘서트 26 공연 현장
+                                <em>2022/08/15-2022/08/15</em>
+                            </p>
+                        </a>
+                    </div>
+                    <div class="space-culture-event">
+                        <a href="sub/" class="contents">
+                            <div class="culture-logo"><img src="img/11-cultureproject.svg" alt="컬쳐 프로젝트"></div>
+                            <div class="view-more"><img src="img/black-arrow.png" alt=""></div>
+                            <span>이 시대 컬처 아이콘을 <br>탐색, 선별 소개</span>
+                            <img src="img/culture-2.jpg" alt="공간문화 컨텐츠 이미지">
+                            <p>
+                                <strong>위켄드</strong>
+                                컬처프로젝트 28
+                                <em>2018/12/15-2018/12/15</em>
+                            </p>
+                        </a>
+                    </div>
+                    <div class="space-culture-event">
+                        <a href="sub/" class="contents">
+                            <div class="culture-logo"><img src="img/12-davincimotel.svg" alt="다빈치 모텔"></div>
+                            <div class="view-more"><img src="img/black-arrow.png" alt=""></div>
+                            <span>문화, 예술에서 지적놀이까지 <br>장르를 넘나드는 페스티벌</span>
+                            <img src="img/culture-3.jpg" alt="공간문화 컨텐츠 이미지">
+                            <p>
+                                <strong>이 집 공연 잘하네</strong>
+                                다빈치모텔 공연 하이라이트
+                                <em>-</em>
+                            </p>
+                        </a>
+                    </div>
+                    <div class="space-culture-event">
+                        <a href="sub/" class="contents">
+                            <div class="culture-logo"><img src="img/13-overtherecord.svg" alt="오버 더 레코드"></div>
+                            <div class="view-more"><img src="img/black-arrow.png" alt=""></div>
+                            <span>녹음하고 베끼고 <br>소문낼수록 좋은 선배들의 꿀강</span>
+                            <img src="img/culture-4.jpg" alt="공간문화 컨텐츠 이미지">
+                            <p>
+                                <strong>배우 이정재 본인 등판!</strong>
+                                '오징어 게임' 이정재의 인생 꿀강 4
+                                <em>-</em>
+                            </p>
+                        </a>
+                    </div>
+                    <div class="space-culture-event">
+                        <a href="sub/" class="contents">
+                            <div class="culture-logo"><img src="img/14-fanmadelive.svg" alt="팬 메이드 라이브"></div>
+                            <div class="view-more"><img src="img/black-arrow.png" alt=""></div>
+                            <span>팬들이 직접 만드는 <br>웰메이드 랜선 라이브</span>
+                            <img src="img/culture-5.jpg" alt="공간문화 컨텐츠 이미지">
+                            <p>
+                                <strong>하이라이트 LIVE PLAY ▶</strong>
+                                Fan-made LIVE, 하이라이트
+                                <em>-</em>
+                            </p>
+                        </a>
+                    </div>
+                    <div class="space-culture-event">
+                        <a href="sub/" class="contents">
+                            <div class="culture-logo"><img src="img/15-limitedvinylclub.svg" alt="리미티드 바이닐 클럽"></div>
+                            <div class="view-more"><img src="img/black-arrow.png" alt=""></div>
+                            <span>한정판 바이닐 <br>최초 릴리즈 래플 이벤트</span>
+                            <img src="img/culture-6.jpg" alt="공간문화 컨텐츠 이미지">
+                            <p>
+                                <strong>나얼 'Soul Pop City' 한정판 바이닐</strong>
+                                Limited Vinyl Club
+                                <em>2023/01/05-2023/01/11</em>
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" title="이전 콘텐츠" class="prev culprev">이전</a>
+            <a href="#" title="다음 콘텐츠" class="next culnext">다음</a>
+        </div> 
+    </div>
+
+    <!-- 푸터영역-->
+    <footer>
+        <div class="top">
+            <div class="clear">
+                <ul class="left">
+                    <li><a href="sub/">고객상담</a></li>
+                    <li><a href="sub/">카드신청</a></li>
+                    <li><a href="sub/">금융신청</a></li>
+                    <li><a href="sub/">도난분실신고</a></li>
+                    <li><a href="sub/">해외</a></li>
+                </ul>
+                <div class="right">
+                    <p>고객센터<strong>1577-6000</strong></p>
+                    <select title="회사소개 선택">
+                        <option>회사소개 (한글)</option>
+                        <option>회사소개 (ENG)</option>
+                        <option>윤리경령</option>
+                        <option>업무위탁현황</option>
+                        <option>인재모집</option>
+                        <option>사이트맵</option>
+                        <option>이용약관</option>
+                        <option>현대카드 그룹사</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <p>현대카드</p>
+            <ul>
+                <li>서울시 영등포구 의사당대로 3 현대카드빌딩 1관</li>
+                <li>사업자 등록번호 213-86-15419</li>
+            </ul>
+            <address>© Hyundai Card Co., Ltd.</address>
+        </div>
+    </footer>
+
+    <script src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,318 @@
+@media (max-width:1300px){
+    header .spot{
+        display:none;
+    }
+    header .lnb > ul{   
+        position: absolute;
+        right:84px;
+    }
+    header .lnb > ul > li{
+        position: relative;
+    }
+    header .lnb > ul > li > ul{
+        position: absolute;
+        width:300px;
+        transform:translateX(-35%);
+        padding:30px 20px;
+        border:1px solid #000;
+    }
+    header .lnb > ul > li > a{
+        padding:0 25px;
+    }
+
+    .slide > .prev, .slide > a{
+        display:none;
+    }
+    #visual .slide-wrap .slide-container{
+        height:700px;
+    }
+    #visual .slide-wrap .slide-container > div{
+        width:100vw;
+        height:700px;
+    }
+    #visual .slide-wrap .slide-container .slide-text{
+        font-size:2rem;
+        line-height:30px;
+    }
+    #visual .slide-wrap .slide-container .slide-text p span{
+        padding:10px 0 0 0;
+        font-size:4rem;
+    }
+    #visual .slide-wrap .slide1{ background-position:left top -400px; }
+    #visual .slide-wrap .slide2{ background-position:left top -50px; }
+    #visual .slide-wrap .slide3{ background-position:left top; }
+    #visual .slide-wrap .slide4{ background-position:left top; }
+    #visual .slide-wrap .slide5{ background-position:left top -80px; }
+
+    #card{  }
+    .card-wrap{ padding:0;}
+    .card-wrap > ul{
+        margin:0;
+        width:96% !important;
+        padding:0 2%;
+    }
+    .card-wrap > ul > li > .card-container{
+        top:240px;
+    }
+
+    #event{
+        width:100%;
+    }
+    #event > div{
+        width:95%;
+        margin:0 2.5% 0 2.5%;
+    }
+    #event .top > .eventwrap li{
+        width:280px;
+        height:280px;
+    }
+    #event .top > ul a{
+        width:280px;
+        height:280px;
+    }
+
+    #space-culture > div.container{
+        width:95%;
+        margin:0 2.5% 0 2.5%;
+    }
+
+    footer .top > div{
+        width:100%;
+    }
+}
+
+
+@media (max-width:1023px){
+    header h1{
+        left:20px;
+    }
+
+    header .lnb > ul{   
+        right:8%;
+    }
+    header .lnb > ul > li > a{
+        padding:0 10px;
+        font-size:1.5rem;
+    }
+    header .lnb > ul > li > ul{
+        position: absolute;
+        width:200px;
+        transform:translateX(-35%);
+        padding:20px 10px;
+        border:1px solid #000;
+    }
+
+    .slide .control{
+        left:140px; 
+    }
+    #visual .slide-wrap .slide1{ background-position:left top -200px; }
+    #visual .slide-wrap .slide2{ background-position:left top 50px; }
+    #visual .slide-wrap .slide3{ background-position:left top 60px; }
+    #visual .slide-wrap .slide4{ background-position:left top 60px; }
+    #visual .slide-wrap .slide6{ background-position:left top -100px; background-size:120%;}
+    #visual .slide-wrap .slide-container .slide-text{
+        top:240px;
+        left:140px;
+    }
+
+
+    .card-wrap > ul{
+        width:100%;
+    }
+    .card-wrap > ul > li{
+        width:48%;
+    }
+    
+    .card-wrap > ul > li > .card-container{
+        top:300px;
+    }
+    .card-wrap > ul > li > .card-container ul li a{
+        width:70%;
+    }
+    .card-wrap > ul > li > .card-container ul li a img{
+        width:100px;
+    }
+
+    #event{
+        width:100%;
+    }
+    #event .top > .eventwrap{
+        width:90% !important;
+        padding:0 5%;
+        display:inline-block;
+        height:auto;
+        display:flex;
+        flex-direction:row;
+        flex-wrap:wrap;
+    }
+    #event .top > .eventwrap li{
+        margin:3% 5% 0 0;
+        background-size:auto;
+        width:30%;
+        height:230px;
+    }
+    #event .top > ul{
+        margin:0 auto;
+    }
+    #event .top > ul a{
+        width:100%;
+        height:100%;
+    }
+    #event .top > ul > li:nth-child(3n){
+        margin:3% 0% 0 0;
+    }
+    #event .top > ul li a span{
+        font-size:1.5rem;
+        padding:90px 0 0 0;
+    }
+    #event .top > a{
+        display:none;
+    }
+    #event .bottom{
+        padding:50px 0 0;
+    }
+    #event .bottom > div{
+        width:90%;
+        margin:0 5%;
+        margin-bottom:30px;
+    }
+
+    #space-culture h3{  
+        width:90%;
+        margin:0 5%;
+    }
+    #space-culture .space-wrap, #space-culture .culture-wrap{
+        width:90%;
+        margin:0 5%;
+    }
+
+    footer .top{
+        width:100%;
+        padding:0 5%;
+        box-sizing:border-box;
+        background-color: #f3f3f3;
+    }
+    footer .top > div{
+        width:100%;
+        padding:5px 0;
+    }
+    footer .top > div div.right p{
+        width:180px;
+    }
+    footer .top > div div.right select{
+        display:none;
+    }
+    footer .bottom{
+        padding:20px;
+    }
+}
+
+@media (max-width:670px){
+    #mob_menu{ display:block;}
+    header{
+        height:60px;
+        top:0;
+        background-color: rgba(255,255,255,1);
+    }
+    header .lnb > ul{
+        display:none;
+    }
+    header h1{
+        padding:15px 0 0 0;
+    }
+    header h1 a{
+        width:121px;
+        height:30px;
+        background:url("../img/logo-icon2.png") no-repeat left top;
+        background-size:cover;
+    }
+    header #mob_menu .mob_menu_box{
+        top:10px;
+    }
+
+    #visual .slide-wrap .slide-container{
+        height:450px;
+    }
+    #visual .slide-wrap .slide-container > div{
+        height:450px;
+    }
+
+    .slide .control{
+        top:400px;
+        left:50%;
+        transform:translateX(-50%);
+    }
+    #visual .slide-wrap .slide1{ background-position:left top -140px; }
+    #visual .slide-wrap .slide2{ background-position:center top -30px; background-size:120%;}
+    #visual .slide-wrap .slide3{ background-position:left -60px top -60px; background-size:120%;}
+    #visual .slide-wrap .slide4{ background-position:left top 30px; }
+    #visual .slide-wrap .slide5{ background-position:left top -50px; background-size:120%;}
+    #visual .slide-wrap .slide-container .slide-text{
+        font-size:1.8rem;
+        line-height:30px;
+        animation:none;
+        top:auto;
+        bottom:60px;
+        left:80px;
+        line-height:25px;
+    }
+    .card-wrap > ul > li > .card-container{
+        top:320px;
+    }
+    #visual .slide-wrap .slide-container .slide-text p span{
+        padding:5px 0 0 0;
+        font-size:2.1rem;
+    }
+
+    .card-wrap > ul > li > .card-container ul{
+        width:90%;
+        margin:0 5%;
+    }
+    .card-wrap > ul > li > .card-container ul li{
+        /* border: 1px solid #000; */
+        box-sizing:border-box;
+    }
+    .card-wrap > ul > li > .card-container ul li a{
+        /* border:1px solid red; */
+    }
+    .card-wrap > ul > li > .card-container ul li a img{
+        width:80px;
+    }
+
+
+    #event > div{
+        padding:60px 0 0 0;
+    }
+    #event .top > .eventwrap li{
+        width:46%;
+        height:24rem;
+        margin:5% 7% 0 0;
+    }
+    #event .top > ul > li:nth-child(3n){
+        margin:5% 7% 0 0;
+    }
+    #event .top > ul > li:nth-child(2n){
+        margin:5% 0 0 0;
+    }
+    
+    #event .top > ul a{
+        display:block;
+        width:100%;
+        height:100%;
+    }
+    #event .bottom > .left ul li{
+        padding:31px;
+    }
+    
+    footer .top > div ul li{
+        padding:0 8px 0 0;
+    }
+    #event .top > ul li a span{
+        font-size:1.6rem;
+    }
+
+    footer .top > div div.right p{
+        font-size:0;
+        width:111px;
+    }
+}
