@@ -19,11 +19,14 @@ dropDown();
 // 스크롤 이벤트
 window.addEventListener("scroll",function(){
 
-let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
-let card = document.getElementById('card');
-let eve = document.getElementById('event');
-let cardScroll = card.offsetHeight;
-let eveScroll = eve.offsetHeight;
+let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY,
+    card = document.getElementById('card'),
+    eve = document.getElementById('event'),
+    spaceculture = document.getElementById('space-culture'),
+    cardScroll = card.offsetTop,
+    eveScroll = eve.offsetTop,
+    spacecultureScroll = spaceculture.offsetTop;
+
 
     // 배경색 변환
     if( scrollTop >= cardScroll - 550 ){
@@ -39,6 +42,16 @@ let eveScroll = eve.offsetHeight;
         this.document.querySelector('header').classList.add('scroll');
     }else{
         this.document.querySelector('header').classList.remove('scroll');
+    }
+
+    // 공지사항탭 active
+    if( scrollTop >= eveScroll - 300 ){
+        document.querySelector("#event .bottom").classList.add('active');
+    }   
+
+    //  스페이스-컬쳐 active
+    if( scrollTop >= spacecultureScroll - 400){
+        spaceculture.classList.add('active');
     }
 
     // 스크롤

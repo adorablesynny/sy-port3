@@ -2,7 +2,7 @@ body{
     width:100%;
 }
 
-/* 비쥬얼 메인 슬라이드 */
+/* 슬라이드 버튼 */
 .slide > .prev, .slide > a{
     position:absolute;
     opacity:80%;
@@ -23,12 +23,100 @@ body{
     right:50px;
     background-position:-125px -11px;
 }
+
+/* 슬라이드 영역 */
+#visual{
+    width:100%;
+    height:auto;
+    position:relative;
+    top:0;
+    left:0;
+}
+#visual .slide-wrap{
+    width:100%;
+    overflow:hidden;
+}
+#visual .slide-wrap .slide-container{
+    position: relative;
+    top:0;
+    left:0;
+    height: 1100px;
+}
+#visual .slide-wrap .slide-container > div{
+    float:left;
+    height:100%;
+    position:relative;
+    top:0;
+    left:0;
+    z-index:-1;
+    width:100vw;
+}
+#visual .slide-wrap .slide1{
+    background:url('https://img.hyundaicard.com/docfiles/resources/pc/images/detail/bg_top_tpi.png');
+    background-position:center center;
+    background-size:100vw;
+}
+#visual .slide-wrap .slide2{
+    background-image:url('https://img.hyundaicard.com/docfiles/resources/pc/images/detail/bg_top_sge2.png');
+    background-position:center center;
+    background-size:100%;
+}
+#visual .slide-wrap .slide3{
+    background-image:url('https://img.hyundaicard.com/docfiles/resources/pc/images/detail/bg_top_emte2.png');
+    background-position:center bottom -200px;
+    background-size:100%;
+}
+#visual .slide-wrap .slide4{
+    background:#000 url('../img/blackcard2.png') no-repeat;
+    background-position:center center;
+    background-size:80%;
+}
+#visual .slide-wrap .slide4 .slide-text > *{
+    text-shadow:0 0 10px rgba(0,0,0,1);
+}
+#visual .slide-wrap .slide5{
+    background-image:url('https://img.hyundaicard.com/docfiles/resources/pc/images/detail/bg_top_tre5.png');
+    background-position:center center;
+    background-size:100%;
+}
+#visual .slide-wrap .slide-container .slide-text{
+    z-index:99;
+    color:#fff;
+    padding:30px 0 0 0;
+    font-size:2.4rem;
+    position:absolute;
+    line-height:40px;
+    font-weight:500;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    animation:text-ani 5s infinite;
+    position: absolute;
+    top:24%;
+    /* left:200px; */
+    left:200px;
+    text-shadow:1px 1px 5px rgba(255,255,255,1);
+}
+#visual .slide-wrap .slide-container .slide-text p span{
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    display: block;
+    padding:30px 0 0 0;
+    font-weight:500;
+    font-size:6rem;
+    font-style: italic;
+}
+@keyframes text-ani{
+    0%{ transform:translateY(0);}
+    50%{ transform:translateY(-10px); }
+    100%{ transform:translateY(0);}
+}
+.soft{
+    transition:left .5s ease-in-out;
+}
+/* 비쥬얼 메인 슬라이드 */
 .slide .control{
     position:absolute;
+    top:20%;
     left:200px;
-    top:180px;
-    z-index:99;
-    
+    z-index:99;    
 }
 .slide .control .auto{
     position: absolute;
@@ -75,95 +163,9 @@ body{
 }
 .slide .control .pager a.now{
     color:#fff;
-    text-shadow:0px 0px 5px rgba(243, 49, 49, 1);
+    text-shadow:0px 0px 5px rgba(0,0,0,0.7);
 }
 
-/* 슬라이드 영역 */
-#visual{
-    width:100%;
-    height:auto;
-    position:relative;
-    top:0;
-    left:0;
-}
-#visual .slide-wrap{
-    width:100%;
-    overflow:hidden;
-}
-#visual .slide-wrap .slide-container{
-    position: relative;
-    top:0;
-    left:0;
-    height:950px;
-}
-#visual .slide-wrap .slide-container > div{
-    float:left;
-    height:950px;
-    position:relative;
-    top:0;
-    left:0;
-    z-index:-1;
-    width:100vw;
-}
-#visual .slide-wrap .slide1{
-    background-image:url(https://www.hyundaicard.com/docfiles/resources/pc/images/detail/bg_voucher_tge2.png);
-    background-position:center center;
-    background-size:100vw;
-}
-#visual .slide-wrap .slide2{
-    background-image:url('https://img.hyundaicard.com/docfiles/resources/pc/images/detail/bg_top_sbhc.png');
-    background-position:left bottom -500px;
-    background-size:100%;
-}
-#visual .slide-wrap .slide3{
-    background-image:url('https://img.hyundaicard.com/docfiles/resources/pc/images/detail/bg_top_nvhc.png');
-    background-position: left top -250px;
-    background-size:100%;
-}
-#visual .slide-wrap .slide3 .slide-text > *{
-    color:rgb(10, 10, 24);
-}
-#visual .slide-wrap .slide4{
-    background:#000 url('https://img.hyundaicard.com/docfiles/resources/pc/images/detail/bg_top_mxb.png');
-    background-position:left top -200px;
-    background-size:100%;
-}
-#visual .slide-wrap .slide5{
-    background-image:url('https://img.hyundaicard.com/docfiles/resources/pc/images/detail/bg_top_tre5.png');
-    background-position:left top -330px;
-    background-size:100%;
-}
-#visual .slide-wrap .slide-container .slide-text{
-    z-index:99;
-    color:#fff;
-    padding:30px 0 0 0;
-    font-size:2.4rem;
-    position:absolute;
-    line-height:40px;
-    font-weight:500;
-    font-family: 'IBM Plex Sans KR', sans-serif;
-    animation:text-ani 5s infinite;
-    position: absolute;
-    top:220px;
-    left:200px;
-    text-shadow:1px 1px 5px rgba(255,255,255,1);
-}
-#visual .slide-wrap .slide-container .slide-text p span{
-    font-family: 'IBM Plex Sans KR', sans-serif;
-    display: block;
-    padding:30px 0 0 0;
-    font-weight:500;
-    font-size:6rem;
-    font-style: italic;
-}
-@keyframes text-ani{
-    0%{ transform:translateY(0);}
-    50%{ transform:translateY(-10px); }
-    100%{ transform:translateY(0);}
-}
-.soft{
-    transition:left .5s ease-in-out;
-}
 
 /* 카드 종류 소개 영역 */
 #card{
@@ -174,7 +176,7 @@ body{
     background-color:#fff;
 }
 #card.color{
-    background-color:rgb(255, 230, 88);
+    background-color:rgb(253, 236, 137);
 }
 .card-wrap{
     margin:0 auto;
@@ -190,7 +192,7 @@ body{
 }
 .card-wrap > ul > li{
     display:inline-block;
-    width:500px;
+    width:480px;
     height:auto;
     margin:0 auto;
 }
@@ -200,6 +202,9 @@ body{
     font-size:4rem;
     display:inline-block;
     padding:0 0 20px 0;
+}
+.card-wrap > ul > li > a > br{
+    display:none;
 }
 .card-wrap > ul > li.on > a{
     font-weight:700;
@@ -440,6 +445,13 @@ body{
     background-color: #f8f6f6;
     position:relative;
     border-radius:10px;
+    opacity:0;
+    transform:translateY(100px);
+    transition:all .5s;
+}
+#event .bottom.active > div{
+    opacity:1;
+    transform:translateY(0);
 }
 #event .bottom > div > a{
     position:absolute;
@@ -553,6 +565,16 @@ body{
     width:1180px;
     margin:0 auto;
     padding:100px 0 0 0;
+    transform:translateX(-50px);
+    opacity:0;
+    transition:transform .6s;
+}
+#space-culture > div.container:last-child{
+    transform:translateX(50px);
+}
+#space-culture.active > div.container{
+    opacity:1;
+    transform:translateX(0);
 }
 #space-culture .space-wrap, #space-culture .culture-wrap{
     padding:40px 0 0 0;
