@@ -436,7 +436,6 @@ mobMenuBtn.addEventListener('click',function(e){
 // 서브메뉴 나타나기
 mobMenuList.forEach(li=>{
     li.addEventListener('click',function(e){
-        e.preventDefault();
 
         if( li.classList.contains('open') == false){
 
