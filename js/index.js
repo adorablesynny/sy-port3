@@ -109,11 +109,11 @@ let pagerwrap = document.getElementsByClassName('pager'),
 
 for( var x=0; x < slideLength; x++){     
 
-    pagerwrapHTML += "<a href='#slide"+(x+1)+"' title=''>0"+(x+1)+"</a>";
+    pagerwrapHTML += "<div class='slide"+(x+1)+"' title=''>0"+(x+1)+"</=>";
     pagerwrap[0].innerHTML = pagerwrapHTML;
 }
 
-let pager = document.querySelectorAll('.pager a');
+let pager = document.querySelectorAll('.pager div');
 pager[0].classList.add('now');
 
 // 슬라이드 이동 함수
@@ -124,7 +124,7 @@ function goToVisualSlide(idx){
     // 페이저 작동
     if(pager[idx].classList.contains('now') == false){    
 
-        let $child = document.querySelectorAll('.pager a');
+        let $child = document.querySelectorAll('.pager div');
 
         Array.prototype.forEach.call($child,(el) => {
             el.classList.remove('now');
@@ -132,6 +132,8 @@ function goToVisualSlide(idx){
         pager[idx].classList.add('now');
     }
 };
+
+goToVisualSlide(0);
 
 // 이전, 다음으로
 vprev.addEventListener('click',function(e){
@@ -186,35 +188,6 @@ pause.addEventListener('click',function(){
     }
 });
 
-
-// 페이저 사용하기 
-pager.forEach(li => {
-    li.addEventListener('click', function(a){
-        a.preventDefault();
-
-        document.querySelector(li.getAttribute("href")).scrollIntoView({
-            behavior : "smooth"
-        });
-
-        if(li.classList.contains('now') == false){
-
-            let $children = li.parentNode.children;
-
-            Array.prototype.forEach.call($children,(el) => {
-                el.classList.remove('now');
-            });
-            li.classList.add('now');
-        }
-
-        clearInterval(visualAutoSlide);
-        pause.classList.add('on');
-        play.classList.remove('on');
-        console.log(currentIndex);
-    });
-    currentIndex = li.target.index;
-});
-
-let lastpager = document.querySelector('.pager a:last-child');
 
 
 
