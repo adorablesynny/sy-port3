@@ -567,6 +567,7 @@ body{
     transform:translateX(-50px);
     opacity:0;
     transition:transform .6s;
+    overflow:hidden;
 }
 #space-culture > div.container:last-child{
     transform:translateX(50px);

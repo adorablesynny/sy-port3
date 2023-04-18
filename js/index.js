@@ -171,7 +171,8 @@ let play = document.querySelector('.auto .play'),
 
 play.classList.add('on');
 
-play.addEventListener('click',function(){
+play.addEventListener('click',function(e){
+    e.preventDefault();
     if( play.classList.contains('on')==false){
         stop();
         play.classList.add('on');
@@ -179,7 +180,8 @@ play.addEventListener('click',function(){
         visualAutoSlide = setInterval(autoSlide, 5000);
     }
 });
-pause.addEventListener('click',function(){
+pause.addEventListener('click',function(e){
+    e.preventDefault();
     if( pause.classList.contains('on')==false){
         stop();
         pause.classList.add('on');
