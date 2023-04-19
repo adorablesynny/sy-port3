@@ -38,19 +38,6 @@ a{
     text-decoration:none;
 }
 
-/* 스크롤 정보 */
-.scrollInfo{
-    position: fixed;
-    display: block;
-    font-size: 15px;
-    padding: 10px 10px 10px 10px;
-    background: rgba(0,0,0,0.5);
-    color: #fff;
-    bottom: 0;
-    left: 0;
-    z-index: 9999;
-}
-
 /* 헤더 영역 */
 header{
     text-align:center;

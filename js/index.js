@@ -54,8 +54,6 @@ let scrollTop = window.pageYOffset || document.documentElement.scrollTop || wind
         spaceculture.classList.add('active');
     }
 
-    // 스크롤
-    this.document.querySelector(".scrollInfo").innerText = "scrollTop : " + scrollTop + "px";
 });
 
 
