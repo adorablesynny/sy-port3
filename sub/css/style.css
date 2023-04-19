@@ -42,7 +42,7 @@ a{
 header{
     text-align:center;
     position:fixed;
-    width:100vw;
+    width:100%;
     height:80px;
     border-bottom:2px solid #000;
     background-color: rgba(255,255,255,0.85);
@@ -165,7 +165,6 @@ header .spot ul li a{
     display:block;
     color:#777;
     height:80px;
-    /* border:1px solid red; */
     padding:0 10px;
     box-sizing:border-box;
     line-height:80px;
@@ -214,34 +213,34 @@ header.scroll .lnb > ul > li > ul{
     cursor: pointer;
 }
 #mob_menu .mob_menu_box span {
-position: absolute;
-display: block;
-background-color: #000;
-width: 30px;
-height: 2px;
-transition: 0.6s ease-in-out;
-z-index: 999;
+    position: absolute;
+    display: block;
+    background-color: #000;
+    width: 30px;
+    height: 2px;
+    transition: 0.6s ease-in-out;
+    z-index: 999;
 }
 #mob_menu .mob_menu_box span:nth-child(2) {
-margin-top: 10px;
+    margin-top: 10px;
 }
 #mob_menu .mob_menu_box span:nth-child(3) {
-margin-top: 20px;
+    margin-top: 20px;
 }
 #mob_menu .mob_menu_box.hamburger {
-background-color: black;
-width: 15px;
-transform: rotate(45deg) translate(5px, 1px);
+    background-color: black;
+    width: 15px;
+    transform: rotate(45deg) translate(5px, 1px);
 }
 #mob_menu .mob_menu_box.hamburger2 {
-background-color: black;
-transform: rotate(-45deg);
-transform-origin: center;
+    background-color: black;
+    transform: rotate(-45deg);
+    transform-origin: center;
 }
 #mob_menu .mob_menu_box.hamburger3 {
-background-color: black;
-width: 15px;
-transform: rotate(45deg) translate(5px, -13.2px);
+    background-color: black;
+    width: 15px;
+    transform: rotate(45deg) translate(5px, -13.2px);
 }
 
 /* 푸터 영역 */

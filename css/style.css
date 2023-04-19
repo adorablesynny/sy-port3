@@ -258,6 +258,7 @@ header .mob_lnb{
 header .mob_lnb > ul{
     position: absolute;
     top:0px;
+    /* display:none; */
     right:-400px;
     padding:90px 0 0 0;
     width:400px;

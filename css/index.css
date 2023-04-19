@@ -91,7 +91,6 @@ body{
     animation:text-ani 5s infinite;
     position: absolute;
     top:24%;
-    /* left:200px; */
     left:200px;
     text-shadow:1px 1px 5px rgba(255,255,255,1);
 }
@@ -153,7 +152,6 @@ body{
 }
 .slide .control .pager div{
     padding:0 10px;
-    /* margin-right:3px; */
     display:inline-block;
     font-size:2.4rem;
     font-style:italic;
@@ -368,7 +366,6 @@ body{
 #event .top > ul li a span{
     display:block;
     opacity:0;
-    padding:5px 0 0;
     font-weight:normal;
     font-size:2rem;    
     font-weight:500;
@@ -703,4 +700,7 @@ body{
     width:100px;
     height:50px;
     padding:0 0 20px 0;
+}
+#space-culture .space-culture-text{
+    display:none;
 }
