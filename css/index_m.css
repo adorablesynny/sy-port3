@@ -355,7 +355,12 @@
         width:100vw;
         height:30px;
         left:50%;
-        transform:translateX(-50%);
+        transform:translateX(-45%);
+        text-align:center;
+    }
+    .slide .control .auto{
+        top:-1px;
+        left:26px;
     }
     .slide .control .pager{
         margin:5px 0px 0px 50px;
@@ -547,9 +552,6 @@
     footer .top > div .left li{
         padding:5px 0 8px 0;
     }
-    /* footer .top > div .left li:last-child{
-        padding:5px 0px 8px 0;
-    } */
     footer .top > div .left li a{
         font-size:1.1rem;
         line-height:1;
