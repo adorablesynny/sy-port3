@@ -107,7 +107,7 @@ let pagerwrap = document.getElementsByClassName('pager'),
 
 for( var x=0; x < slideLength; x++){     
 
-    pagerwrapHTML += "<div class='slide"+(x+1)+"' title=''>0"+(x+1)+"</=>";
+    pagerwrapHTML += "<div class='slide"+(x+1)+"' title=''>0"+(x+1)+"</div>";
     pagerwrap[0].innerHTML = pagerwrapHTML;
 }
 

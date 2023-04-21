@@ -344,28 +344,24 @@
     #visual .slide-wrap .slide-container .slide-text{
         display:none;
     }
-    .slide .prev{
-        left:13px;
-    }
-    .slide .next{
-        right:0px;
-    }
     .slide .control{
         top:90%;
-        width:100vw;
-        height:30px;
-        left:50%;
-        transform:translateX(-45%);
+        width:auto;
+        height:auto;
         text-align:center;
+        left:50%;
+        transform:translateX(-50%);
+        white-space:nowrap;
     }
     .slide .control .auto{
-        top:-1px;
-        left:26px;
+        top:3px;
+        left:0;
     }
     .slide .control .pager{
-        margin:5px 0px 0px 50px;
+        margin:0 0 0 50px;
     }
     .slide .control .pager div{
+        padding:0 5px;
         font-size:1.5rem;
     }
 

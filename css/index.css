@@ -120,8 +120,9 @@ body{
 .slide .control .auto{
     position: absolute;
     left:0px;
-    top:0;
+    top:10px;
     display: inline-block;
+    font-size:0;
 }
 .slide .control .auto a{
     background-image:url("../img/sp_com2.png");
