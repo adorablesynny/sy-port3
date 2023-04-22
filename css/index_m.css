@@ -331,6 +331,9 @@
     header{
         width:100vw;
     }
+    header .mob_lnb > ul.menu_show{
+        transform:translateX(-85%);
+    }
     
     #visual .slide-wrap .slide-container{
         height:350px;
@@ -400,6 +403,7 @@
     #event > div{
         width:100%;
         margin:0;
+        padding:30px 0 0 0;
     }
     #event .top > .eventwrap{
         width:100%;
@@ -409,13 +413,25 @@
         width:100%;
         flex:1;
     }
+    #event .top > ul a{
+        height:140px;
+        position: relative;
+        background-color:rgba(0,0,0,0.3);
+    }
     #event .top > ul li a span{
-        width:100%;
-        height:100%;
-        padding:50px 0;
+        width:auto;
+        height:auto;
+        padding:0;
         opacity:1;
-        background-color: rgba(0,0,0,0.4);
         border-radius:5px;
+        text-shadow:0 0 5px rgba(0,0,0,1);
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+    }
+    #event .bottom{
+        padding:30px 0 0 0;
     }
     #event .bottom h2{
         font-size:17px;
